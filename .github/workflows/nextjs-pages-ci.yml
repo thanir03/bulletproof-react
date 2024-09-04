@@ -25,7 +25,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: yarn install:nextjs-pages
+        run: pnpm install:nextjs-pages
 
       # Run next build in app/nextjs-pages directory
       - name: Build static files
@@ -34,7 +34,7 @@ jobs:
           NEXT_PUBLIC_ENABLE_API_MOCKING: false
           NEXT_PUBLIC_MOCK_API_PORT: 8081
           NEXT_PUBLIC_URL: http://localhost:3001
-        run: yarn build:nextjs-pages
+        run: pnpm build:nextjs-pages
 
   test:
     runs-on: ubuntu-latest
@@ -52,7 +52,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: yarn install:nextjs-pages
+        run: pnpm install:nextjs-pages
 
       # Run next test in app/nextjs-pages directory
       - name: Running test
@@ -61,7 +61,7 @@ jobs:
           NEXT_PUBLIC_ENABLE_API_MOCKING: false
           NEXT_PUBLIC_MOCK_API_PORT: 8081
           NEXT_PUBLIC_URL: http://localhost:3001
-        run: yarn test:nextjs-pages
+        run: pnpm test:nextjs-pages
 
       - name: Upload test results
         uses: actions/upload-artifact@v3
@@ -85,7 +85,7 @@ jobs:
 
         # Install dependencies
       - name: Install dependencies
-        run: yarn install:nextjs-pages
+        run: pnpm install:nextjs-pages
 
       # Run next test in app/nextjs-pages directory
       - name: Running code quality check
@@ -94,7 +94,7 @@ jobs:
           NEXT_PUBLIC_ENABLE_API_MOCKING: false
           NEXT_PUBLIC_MOCK_API_PORT: 8081
           NEXT_PUBLIC_URL: http://localhost:3001
-        run: yarn lint:nextjs-pages
+        run: pnpm lint:nextjs-pages
 
   deploy:
     runs-on: ubuntu-latest
