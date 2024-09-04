@@ -37,4 +37,5 @@ yarn-error.log*
 
 # local
 mocked-db.json
+test-reports
 
