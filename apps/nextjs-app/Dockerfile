@@ -40,7 +40,7 @@ RUN pnpm run build
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose ports
-EXPOSE 3001 8081
+EXPOSE 3002 8082
 
 # Run the application using supervisord
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
